@@ -17,28 +17,3 @@
 /*    transition: all 3s 0s linear;*/
     align-self: ; /* mis elemendid, kui kaua tranition aega v]tab, millal hakkab toimuma, kiirendus */
 }
-
-/*.seier:hover {
-    transform: rotate(90deg);
-}*/
-
-@keyframes ringiratast {
-    from   {transform: rotate(0deg)}
-    to  {transform: rotate(360deg);}
-}
-
-.sek_anim {
-    animation-name: ringiratast;
-    animation-duration: 60s;
-    animation-iteration-count:infinite;
-}
-
-.min_anim {
-    animation-name: ringiratast;
-    animation-duration: 3600s;
-}
-
-.tund_anim {
-    animation-name: ringiratast;
-    animation-duration: 86400;
-}
