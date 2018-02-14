@@ -1,1 +1,2 @@
-# mm_progemine
+# mm_progemine  
+Multimeedia programmeerimise aine tööd
