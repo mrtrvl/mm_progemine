@@ -1,9 +1,12 @@
-window.onload = () => {
-    let timeNow;
-    let hourNow;
-    let minuteNow;
-    let secondNow;
+let timeNow;
+let hourNow;
+let minuteNow;
+let secondNow;
+let animationRunFlag = false;
+let animationCount = 0;
+let animationToPlay;
 
+window.onload = () => {
     tictac();
 };
 
@@ -14,10 +17,17 @@ tictac = () => {
     secondNow = timeNow.getSeconds();
 
     animateClockHands();
-    if (checkIfDividesWithFifteen(secondNow)) {
-        console.log("Divides");
+    if (checkIfDividesWithFifteen(secondNow) && !animationRunFlag) {
+        animationRunFlag = true;
+        animationToPlay = chooseAnimation(animationCount);
+        document.getElementById("kell").style.animation = animationToPlay + " 4s linear 1";
+        animationCount ++;
+        console.log(animationCount, animationToPlay);
     }
 
+    if (animationCount >= 4) {
+        animationCount = 0;
+    }
     requestAnimationFrame(tictac);
 }
 
@@ -28,5 +38,25 @@ animateClockHands = () => {
 }
 
 checkIfDividesWithFifteen = (dataToDivide) => {
-    return dataToDivide % 15 == 0 ? true : false;
+    if (dataToDivide % 15 == 0) {
+        return true;
+    } else {
+        animationRunFlag = false;
+        return false;
+    }
+}
+
+chooseAnimation = (count) => {
+    let animationName;
+    if (count == 0) {
+        animationName = "spin";
+    } else if (count == 1) {
+        animationName ="colour";
+    } else if (count == 2) {
+        animationName = "zoomInZoomOut";
+    } else {
+        animationName = "flip";
+    }
+
+    return animationName;
 }

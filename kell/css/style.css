@@ -13,7 +13,49 @@
     top: 10px;
     left: 130px;
     transform-origin: center 140px;
-    animation-timing-function: linear;
-/*    transition: all 3s 0s linear;*/
-    align-self: ; /* mis elemendid, kui kaua tranition aega v]tab, millal hakkab toimuma, kiirendus */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colour {
+    0% {
+        background: whitw;
+    }
+    50% {
+        background: green;
+    }
+    100% {
+        background: white;
+    }
+}
+
+@keyframes zoomInZoomOut {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(-1, -1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(-1, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
