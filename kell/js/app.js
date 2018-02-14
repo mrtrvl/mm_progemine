@@ -17,17 +17,20 @@ tictac = () => {
     secondNow = timeNow.getSeconds();
 
     animateClockHands();
+
     if (checkIfDividesWithFifteen(secondNow) && !animationRunFlag) {
         animationRunFlag = true;
+
         animationToPlay = chooseAnimation(animationCount);
         document.getElementById("kell").style.animation = animationToPlay + " 4s linear 1";
+
         animationCount ++;
-        console.log(animationCount, animationToPlay);
     }
 
     if (animationCount >= 4) {
         animationCount = 0;
     }
+
     requestAnimationFrame(tictac);
 }
 
@@ -48,6 +51,7 @@ checkIfDividesWithFifteen = (dataToDivide) => {
 
 chooseAnimation = (count) => {
     let animationName;
+
     if (count == 0) {
         animationName = "spin";
     } else if (count == 1) {
