@@ -27,9 +27,7 @@ tictac = () => {
         animationCount ++;
     }
 
-    if (animationCount >= 4) {
-        animationCount = 0;
-    }
+    animationCount = animationCount >= 4 ? 0 : animationCount;
 
     requestAnimationFrame(tictac);
 }
