@@ -1,0 +1,139 @@
+.animArea {
+    width: 940px;
+    height: 623px;
+    position: relative;
+    overflow: hidden;
+}
+
+.animArea * {
+    position: absolute;
+}
+
+.copter {
+    width: 493px;
+    height: 175px;
+    left: 350px;
+    top: 400px;
+    animation: liftOff 7s linear infinite;
+    /* name duration timing-function delay iteraction-count direction fill-mode play-state */
+    animation-play-state: paused;
+}
+
+.body {
+    left: 36px;
+}
+
+.tailRotor {
+    left: 378px;
+    top: 19px;
+    animation-name: spin;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.rotor {
+    animation-name: rotSideways;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.copter:hover {
+    animation-play-state: paused;
+}
+
+@keyframes rotSideways {
+    0% {
+        transform: scale(1, 1);
+    }
+    
+    100% {
+        transform: scale(.1, 1);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flyLtr {
+    0% {
+        left: -550px;
+        top: 200px;
+    }
+    
+    100% {
+        left: 1000px;
+        top: 200px;
+    }
+}
+
+@keyframes liftOff {
+    0% {
+        left: 350px;
+        top: 400px;
+        transform: rotate(0deg) scale(1.2, 1.2);
+    }
+    
+    50% {
+        left: 350px;
+        top: 200px;
+        transform: rotate(0deg) scale(1, 1);
+    }
+
+    60% {
+        left: 350px;
+        top: 200px;
+        transform: rotate(-10deg) scale(1, 1);
+    }
+
+    100% {
+        left: -550px;
+        top: 200px;
+        transform: rotate(-10deg) scale(1, 1);
+    }
+}
+
+@keyframes touchDown {
+    0% {
+        left: 1000px;
+        top: 200px;
+        transform: rotate(-10deg) scale(1, 1) ;
+    }
+    
+    50% {
+        left: 350px;
+        top: 200px;
+        transform: rotate(0deg) scale(1, 1);
+    }
+
+    60% {
+        left: 350px;
+        top: 200px;
+        transform: rotate(0deg) scale(1, 1);
+    }
+
+    100% {
+        left: 350px;
+        top: 400px;
+        transform: rotate(0deg) scale(1.2, 1.2);
+    }   
+}
+
+.controls {
+    width: 940px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#flyCount {
+    margin-top: 5px;
+}

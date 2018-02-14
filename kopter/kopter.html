@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<title>MM programmeerimine</title>
+<link rel="stylesheet" type="text/css" href="css/anim1.css">
+<script type="text/javascript" src="js/app.js" defer></script>
+</head>
+<body>
+    <h1>Helikopter</h1>
+    <div class="animArea" id="animArea">
+        <img src="maastik/landscape-nature-sky-blue.jpg" alt="Maastik">
+        <div class="copter" id="copter">
+            <img src="kopter/kopterikere.png" alt="Kopterikere" class="body">
+            <img src="kopter/rootor.png" alt="Rootor" class="rotor">
+            <img src="kopter/tagarootor.png" alt="Tagarootor" class="tailRotor">
+        </div>
+    </div>
+    <div class="controls">
+        <div>
+            <button id="startAnimation">Start / Pause animation</button>       
+        </div>
+        <div>
+            <input type="range" min="1" max="9" value="1" step="2" id="flyCount">
+            <p id="sliderOutput"></p>
+        </div>
+    </div>
+
+</body>
+</html>
