@@ -1,0 +1,30 @@
+body {
+    font-family: 'Walter Turncoat', cursive;
+}
+
+h1 {
+    font-size: 4em;
+    color: deeppink;
+}
+
+.row {
+    margin-top: 5px;
+}
+
+#bg-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(../images/background.jpg);
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+canvas {
+    margin: 30px;
+    box-shadow: 0px 0px 20px 20px deeppink;
+    border-radius: 25px;
+}
+

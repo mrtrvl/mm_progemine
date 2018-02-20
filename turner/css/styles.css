@@ -1,0 +1,45 @@
+.animArea {
+    width: 940px;
+    height: 623px;
+    position: relative;
+    overflow: hidden;
+}
+
+.animArea * {
+    position: absolute;
+}
+
+.image {
+    /* transform: rotateY(0deg); */
+    transform-origin: center;
+    /* animation: spin 7s linear 1; */
+    /* name duration timing-function delay iteraction-count direction fill-mode play-state */
+    animation-play-state: paused;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotateY(90deg);
+    }
+    
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+.controls {
+    width: 940px;
+    text-align: center;
+    margin-top: 10px;
+}
