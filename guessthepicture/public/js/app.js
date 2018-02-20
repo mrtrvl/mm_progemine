@@ -25,6 +25,8 @@ animate = () => {
                 stopWatch();
                 stopWatchRunning = true;
             }
+        } else {
+            animRunning = false;
         }
         updateStopperOnPage();
     } else {
@@ -110,9 +112,9 @@ imageLoaded = () => {
 stopWatch = () => {
     stopper = setInterval(() => {
         time += 0.1;
-    }, 10);
+    }, 100);
 }
 
 updateStopperOnPage = () => {
-    document.getElementById("stopWatch").innerHTML = "Aeg: " + time;
+    document.getElementById("stopWatch").innerHTML = "Aeg: "  + Math.floor(time) + " sekundit";
 }
