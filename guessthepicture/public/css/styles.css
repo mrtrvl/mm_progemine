@@ -28,3 +28,7 @@ canvas {
     border-radius: 25px;
 }
 
+#stopWatch {
+    font-size: 2em;
+    font-weight: 800;
+}

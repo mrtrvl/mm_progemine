@@ -13,11 +13,13 @@ let stopWatchRunning = false;
 window.onload = function() {
     document.getElementById("startAnimation").addEventListener("click", animatePicture);
     document.getElementById("pictureSelector").addEventListener("input", updatePictureName);
+    document.getElementById("showPicture").addEventListener("click", showPicture);
     animate(); 
 };
 
 animate = () => {
     if (animRunning) {
+        document.getElementById("showPicture").disabled = false;
         if (angle > 0) {
             angle -= angleStep;
             updateCanvas();
@@ -58,6 +60,7 @@ updatePictureName = async () => {
     try {
         removeOldCanvas();
 
+        document.getElementById("showPicture").disabled = true;
         imageSrc = document.getElementById("pictureSelector").value;
         let elem = await getElement(imageSrc);
         document.getElementById("placehere").appendChild(elem);
@@ -117,4 +120,9 @@ stopWatch = () => {
 
 updateStopperOnPage = () => {
     document.getElementById("stopWatch").innerHTML = "Aeg: "  + Math.floor(time) + " sekundit";
+}
+
+showPicture = () => {
+    angle = 0;
+    updateCanvas();
 }
