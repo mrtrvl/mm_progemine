@@ -1,0 +1,61 @@
+.kellakoht {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border: solid 1px black;
+}
+
+.kellakoht * {
+    position: absolute;
+}
+
+.seier {
+    top: 10px;
+    left: 130px;
+    transform-origin: center 140px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colour {
+    0% {
+        background: whitw;
+    }
+    50% {
+        background: green;
+    }
+    100% {
+        background: white;
+    }
+}
+
+@keyframes zoomInZoomOut {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(-1, -1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(-1, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}

@@ -1,0 +1,14 @@
+.tlnPicArea {
+    width: 600px;
+    height: 450px;
+    position: relative;
+}
+
+.tlnPicArea * {
+    position: absolute;
+}
+
+#tlnPic2 {
+    opacity: 0;
+    transition: opacity 1s .2s;
+}

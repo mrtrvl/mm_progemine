@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="utf-8">
+    <title>Animeeritud kell</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+    <h1>Pildikesi Tallinnast</h1>
+    <div class="tlnPicArea">
+        <img id="tlnPic1" src="http://www.cs.tlu.ee/~rinde/media/fotod/tallinn600x450/tln_1.JPG" alt="Tallinn">
+        <img id="tlnPic2" src="" alt="Tallinn">
+    </div>
+    
+    <br>
+    <input type="submit" id="prevPic" value="Eelmine pilt">
+    <input type="submit" id="nextPic" value="Järgmine pilt">
+    <span id="picNamePlace"></span>
+    <br>
+    <label>Heledus: </label><input type="range" id="brightBtn" min="0" value="100" max="1000">
+    <label>Kontrast: </label><input type="range" id="contrastBtn" min="0" value="100" max="1000">
+    <label>Värviintensiivsus: </label><input type="range" id="saturateBtn" min="0" value="100" max="1000">
+    <label>Värvinihe: </label><input type="range" id="hueBtn" min="0" value="0" max="360">
+</body>
+
+</html>

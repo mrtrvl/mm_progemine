@@ -1,0 +1,95 @@
+.tlnPicArea {
+    width: 600px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tlnPicArea * {
+    position: absolute;
+}
+
+#top {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+@keyframes maxToMinNext {
+    0% {
+        transform: scale(1, 1) rotate(0deg);
+        opacity: 1;
+        filter: brightness(100%)
+    }
+
+    75% {
+        transform: scale(0.25, 0.25) rotate(75deg);
+        opacity: 0.25;
+        filter: brightness(25%)
+    }
+    
+    100% {
+        transform: scale(0, 0) rotate(100deg);
+        opacity: 0;
+        filter: brightness(0%)
+    }
+}
+
+@keyframes minToMaxNext {
+    0% {
+        transform: scale(0, 0) rotate(100deg);
+        opacity: 0;
+        filter: brightness(0%)
+    }
+
+    75% {
+        transform: scale(1.25, 1.25) rotate(-25deg);
+        opacity: 0.75;
+        filter: brightness(200%)
+    }
+    
+    100% {
+        transform: scale(1, 1) rotate(0deg);
+        opacity: 1;
+        filter: brightness(100%)
+    }
+}
+
+@keyframes maxToMinPrev {
+    0% {
+        transform: scale(1, 1) rotate(0deg);
+        opacity: 1;
+        filter: brightness(100%)
+    }
+
+    75% {
+        transform: scale(0.25, 0.25) rotate(-75deg);
+        opacity: 0.25;
+        filter: brightness(25%)
+    }
+    
+    100% {
+        transform: scale(0, 0) rotate(-100deg);
+        opacity: 0;
+        filter: brightness(0%)
+    }
+}
+
+@keyframes minToMaxPrev {
+    0% {
+        transform: scale(0, 0) rotate(-100deg);
+        opacity: 0;
+        filter: brightness(0%)
+    }
+
+    75% {
+        transform: scale(1.25, 1.25) rotate(25deg);
+        opacity: 0.75;
+        filter: brightness(200%)
+    }
+    
+    100% {
+        transform: scale(1, 1) rotate(0deg);
+        opacity: 1;
+        filter: brightness(100%)
+    }
+}
